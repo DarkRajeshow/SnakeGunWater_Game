@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Gun Water -: Game</title>
+    <script src="https://kit.fontawesome.com/39d33edbd5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images/SGW.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title1"><i class="fa-solid fa-staff-snake"></i> : <i class="fa-solid fa-gun"></i> : <i class="fa-solid fa-water"></i></h1>
+    </div>
+    <br>
+    <button class="startButton" onclick="startGame()">Try Your Luck!</button>
+
+    <div class="MainCards">
+        <div class="computerCard">
+            <i class="fa-solid fa-computer"></i>
+            <h3>Hello! I am computer.</h3>
+        </div>
+        <i class="fa-solid fa-khanda" id="battleIcon"></i>
+        <p class="loader"></p>
+        <div class="userCard">
+            <i class="fa-solid fa-user-secret"></i>
+            <h3>Hello! I am user.</h3>
+        </div>
+    </div>
+    <h2 class="resultDescription">Select below cards and click <br> on the try your luck button to start...</h2>
+    <div class="choiceCards">
+        <input type="radio" name="card" id="card_one">
+        <input type="radio" name="card" id="card_two">
+        <input type="radio" name="card" id="card_three">
+
+        <label for="card_one">
+            <div class="card">
+                <i class="fa-solid fa-staff-snake"></i>
+                <p>Snake</p>
+            </div>
+        </label>
+
+        <label for="card_two">
+            <div class="card">
+                <i class="fa-solid fa-gun"></i>
+                <p>Gun</p>
+            </div>
+        </label>
+
+        <label for="card_three">
+            <div class="card">
+                <i class="fa-solid fa-water"></i>
+                <p>Water</p>
+            </div>
+        </label>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

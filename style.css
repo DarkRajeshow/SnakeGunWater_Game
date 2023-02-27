@@ -1,0 +1,399 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.loader {
+  border: 10px solid #ffffff;
+  /* Light grey */
+  border-top: 10px solid #868585;
+  /* Blue */
+  position: absolute;
+  border-radius: 50%;
+  display: none;
+  top: 400px;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #c0fffd;
+  text-align: center;
+}
+
+.fa-staff-snake {
+  color: #11b263;
+}
+
+.fa-gun {
+  color: #5c8177;
+}
+
+.fa-water {
+  color: #2ea8d1;
+}
+
+.title1 {
+  margin-top: 40px;
+  color: black;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.title2 {
+  font-size: 2.2rem;
+}
+
+.startButton {
+  background-color: #9bceb5;
+  border: none;
+  border-radius: 7px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.startButton:hover {
+  background-color: #11b263;
+  color: white;
+  transform: scale(1.05);
+}
+
+.resultDescription {
+  width: 60%;
+  margin: auto;
+  color: gray;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.MainCards,
+.choiceCards {
+  display: flex;
+  justify-content: center;
+}
+
+.MainCards > div {
+  width: 210px;
+  height: 210px;
+  border-radius: 10px;
+  background-color: #9df3da;
+  padding: 20px;
+  margin: 20px 30px;
+  cursor: pointer;
+}
+
+.MainCards > div:hover {
+  transform: scale(1.03);
+  background-color: #71ffd6;
+}
+
+.MainCards > div > i {
+  font-size: 120px;
+  color: #076d71;
+  margin-top: 20px;
+}
+
+.MainCards > div > h3 {
+  color: #693236;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.MainCards > i {
+  font-size: 75px;
+  color: #0442b9;
+  margin-top: 100px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.MainCards > i:hover {
+  transform: scale(1.05);
+}
+
+.choiceCards > label > div {
+  width: 90px;
+  height: 90px;
+  margin: 20px;
+  border-radius: 6px;
+  background-color: #dae7db;
+  padding: 10px;
+  cursor: pointer;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.choiceCards > label > div > i {
+  font-size: 40px;
+  margin-top: 15px;
+}
+
+.choiceCards > label > div > p {
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+}
+
+.choiceCards > label > div:hover {
+  transform: scale(1.1);
+}
+
+.choiceCards > label > div:active {
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+input[id="card_one"]:checked ~ label[for="card_one"] .card,
+input[id="card_two"]:checked ~ label[for="card_two"] .card,
+input[id="card_three"]:checked ~ label[for="card_three"] .card {
+  border-color: #11b263;
+}
+
+input {
+  display: none;
+}
+
+@keyframes battleAnimation {
+  0% {
+    transform: scale(1);
+    color: #0442b9;
+  }
+
+  10% {
+    transform: scale(1.2);
+  }
+
+  20% {
+    transform: scale(0.8);
+  }
+
+  27.5% {
+    transform: rotate(-20deg);
+  }
+
+  35% {
+    transform: rotate(20deg);
+  }
+
+  42.5% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  57.5% {
+    transform: rotate(-20deg);
+  }
+
+  65% {
+    transform: rotate(20deg);
+  }
+
+  72.5% {
+    transform: rotate(-20deg);
+  }
+
+  80% {
+    transform: rotate(20deg);
+  }
+
+  80% {
+    transform: scale(1.6);
+  }
+
+  90% {
+    transform: scale(0.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 86.5%;
+  }
+}
+
+.title1 {
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.container {
+  display: inline-block;
+}
+
+.winClassCard {
+  background-color: #71ffd6;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 565px) {
+  .MainCards > div {
+    width: 180px;
+    height: 180px;
+  }
+  .MainCards > div > i {
+    font-size: 70px;
+  }
+  .MainCards > i {
+    font-size: 50px;
+  }
+  .choiceCards > label > div {
+    padding: 15px;
+    width: 70px;
+    height: 70px;
+  }
+  .choiceCards > label > div > i {
+    font-size: 25px;
+  }
+  .title1 {
+    font-size: 36px;
+  }
+  .resultDescription {
+    font-size: 17px;
+  }
+  .startButton {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .loader {
+    margin-top: -40px;
+    border: 6px solid #ffffff;
+    border-top: 6px solid #868585;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .MainCards > div {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+  }
+  .MainCards > div > i {
+    font-size: 60px;
+  }
+  .userCard{
+    padding: 100px;
+  }
+  .MainCards > i {
+    margin: 100px 0;
+    padding: 0;
+    font-size: 35px;
+  }
+  .choiceCards > label > div {
+    margin: 20px 7px;
+    padding: 15px;
+    width: 55px;
+    height: 55px;
+  }
+  .choiceCards > label > div > i {
+    margin-top: 0px;
+    font-size: 30px;
+  }
+  .choiceCards > label > div > p{
+    font-size: 16px;
+  }
+  .title1 {
+    font-size: 36px;
+  }
+  .resultDescription {
+    font-size: 17px;
+  }
+  .startButton {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .loader {
+    margin-top: -70px;
+    border: 6px solid #ffffff;
+    border-top: 6px solid #868585;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 440px){
+  .MainCards>div>h3{
+    font-size: 12px;
+  }
+  .MainCards>div>i{
+    font-size: 55px;
+  }
+  .resultDescription{
+    font-size: 14px;
+    width: 80%;
+  }
+  .title1{
+    font-size: 32px;
+  }
+  .startButton {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .MainCards>div{
+    margin: 30px 15px;
+  }
+  .MainCards > i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 370px){
+  .title1{
+    font-size: 32px;
+  }
+  .resultDescription{
+    font-size: 14px;
+    width: 90%;
+  }
+  .MainCards>div{
+    margin: 30px 15px;
+  }
+  .MainCards>div>h3{
+    width: 75px;
+  }
+  .MainCards > i {
+    font-size: 30px;
+  }
+  .choiceCards > label > div {
+    margin: 20px 7px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  .choiceCards > label > div > i {
+    margin-top: 0px;
+    font-size: 25px;
+  }
+  .choiceCards > label > div > p{
+    font-size: 13px;
+  }
+}
