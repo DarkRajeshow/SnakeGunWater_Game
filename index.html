@@ -6,24 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Gun Water -: Game</title>
+
+    <!-- font awesome cdn link -->
     <script src="https://kit.fontawesome.com/39d33edbd5.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/SGW.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
 
+    <!-- external style stylesheet (css) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- title -->
     <div class="container">
         <h1 class="title1"><i class="fa-solid fa-staff-snake"></i> : <i class="fa-solid fa-gun"></i> : <i class="fa-solid fa-water"></i></h1>
     </div>
     <br>
-    <button class="startButton" onclick="startGame()">Try Your Luck!</button>
 
+    <!-- startButton -->
+    <button class="startButton">Try Your Luck!</button>
+
+    <!-- Main Cards -->
     <div class="MainCards">
         <div class="computerCard">
             <i class="fa-solid fa-computer"></i>
@@ -36,12 +45,19 @@
             <h3>Hello! I am user.</h3>
         </div>
     </div>
+
+    <!-- result Description text-->
     <h2 class="resultDescription">Select below cards and click <br> on the try your luck button to start...</h2>
+
+    <!-- choice cards for user -->
     <div class="choiceCards">
+
+        <!-- for radio choice   -->
         <input type="radio" name="card" id="card_one">
         <input type="radio" name="card" id="card_two">
         <input type="radio" name="card" id="card_three">
 
+        <!-- choice cards -->
         <label for="card_one">
             <div class="card">
                 <i class="fa-solid fa-staff-snake"></i>
@@ -62,9 +78,9 @@
                 <p>Water</p>
             </div>
         </label>
-
     </div>
 
+    <!-- external script  -->
     <script src="app.js"></script>
 </body>
 
